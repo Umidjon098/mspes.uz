@@ -1,0 +1,39 @@
+@import "./sass/navbar";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',
+    sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+@media (min-width: 1400px){
+    .container {
+        max-width: 1320px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1400px){
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
