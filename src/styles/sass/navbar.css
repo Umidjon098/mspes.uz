@@ -46,6 +46,12 @@
   }
 }
 
+@media (min-width: 490px) and (max-width: 992px) {
+  .navbar .container .right_side {
+    width: 50%;
+  }
+}
+
 @media (max-width: 490px) {
   .navbar .container {
     -webkit-box-orient: vertical;
