@@ -1,4 +1,5 @@
 @import "./sass/navbar";
+@import "./sass/trending";
 
 *{
     padding: 0;
@@ -9,9 +10,21 @@
 }
 
 .container {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
 }
+.section{
+    margin-top: 56px !important;
+}
+ .heading {
+    font-size: 40px;
+    font-weight: 700;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
 @media (min-width: 1400px){
     .container {
         max-width: 1320px;
