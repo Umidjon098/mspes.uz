@@ -1,192 +1,189 @@
-.trending_horizontal{
-    display: flex;
-    align-items: center;
-    min-height: 385px;
-    .img_box{
-        margin-right: 3rem;
-        img{
-        width: 440px;
-        height: 385px;
-        border-radius: 7px;
-        @media(max-width: 992px) {
-            width: 100%;
-            height: 100%;
-        }
-        }
-        @media(max-width: 992px) {
-            margin-right: 0;
-            margin-bottom: 24px;
-        }
-    }
-    .trending_data{
-       .category{
-           display: flex;
-           align-items: center;
-           font-family: 'Poppins',
-            sans-serif;
-            margin-bottom: 1rem;
-           .name{
-               color: #222;
-               font-weight: 700;
-               font-size: 14px;
-               padding: 0 5px;
-           }
-           .create_date{
-            color: #999;
-            font-weight: 400;
-            font-size: 14px;
-            padding: 0 5px;
-           }
-       }
-       .title{
-            font-size: 40px;
-            font-weight: 700;
-            width: 95%;
-            margin-bottom: 8px;
-            @media(max-width: 1400px) {
-                font-size: 30px;
-            }
-         
-       }
-       .short_description{
-           width: 100%;
-           margin-bottom: 1rem;
-           color: #888;
-           font-size: 14px;
-       }
-       .author{
-           display: flex;
-           align-items: center;
-           .authoe_img{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               width: 45px;
-               height: 45px;
-               border-radius: 50%;
-               background-color: rgb(24, 166, 209);
-               margin-right: 10px;
-               font-size: 20px;
-               color: #fff;
-               font-weight: 600;
-           }
-           .name{
-                font-weight: 400;
-                color: #000;
-                font-weight: 700;
-                display: block;
-                line-height: 1;
-           }
-           .position{
-            font-size: 13px;
-            color: #888;
-           }
-       }
-    }
-    @media(max-width: 992px) {
-        flex-direction: column;
-    }
-}
-.trending_vertical {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 30%;
-    .img_box {
-            margin-bottom: 24px;
-            height: 256px;
-            width: 100%;
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 7px;
-            @media(max-width: 992px) {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    @media(max-width: 992px) {
+.trending_horizontal {
+  display: flex;
+  align-items: center;
+  min-height: 385px;
+  .img_box {
+    margin-right: 3rem;
+    img {
+      width: 440px;
+      height: 385px;
+      border-radius: 7px;
+      @media (max-width: 992px) {
         width: 100%;
         height: 100%;
+      }
     }
+    @media (max-width: 992px) {
+      margin-right: 0;
+      margin-bottom: 24px;
     }
-    .trending_data {
-        .category {
-            display: flex;
-            align-items: center;
-            font-family: 'Poppins',
-                sans-serif;
-            margin-bottom: 1rem;
-
-            .name {
-                color: #222;
-                font-weight: 700;
-                font-size: 14px;
-                padding: 0 5px;
-            }
-
-            .create_date {
-                color: #999;
-                font-weight: 400;
-                font-size: 14px;
-                padding: 0 5px;
-            }
-        }
-
-        .title {
-            font-size: 18px;
-            font-weight: 700;
-            width: 95%;
-            margin-bottom: 8px;
-        }
-
-        .short_description {
-            width: 100%;
-            margin-bottom: 1rem;
-            color: #888;
-            font-size: 14px;
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-
-            .authoe_img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                background-color: rgb(24, 166, 209);
-                margin-right: 10px;
-                font-size: 20px;
-                color: #fff;
-                font-weight: 600;
-            }
-
-            .name {
-                font-weight: 400;
-                color: #000;
-                font-weight: 700;
-                display: block;
-                line-height: 1;
-            }
-
-            .position {
-                font-size: 13px;
-                color: #888;
-            }
-        }
+  }
+  .trending_data {
+    .category {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 1rem;
+      .name {
+        color: #222;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 0 5px;
+      }
+      .create_date {
+        color: #999;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0 5px;
+      }
     }
-    @media(max-width: 992px) {
-        max-width: 100%;
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      width: 95%;
+      margin-bottom: 8px;
+      @media (max-width: 1400px) {
+        font-size: 30px;
+      }
     }
+    .short_description {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #888;
+      font-size: 14px;
+    }
+    .author {
+      display: flex;
+      align-items: center;
+      .authoe_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: rgb(24, 166, 209);
+        margin-right: 10px;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+      }
+      .name {
+        font-weight: 400;
+        color: #000;
+        font-weight: 700;
+        display: block;
+        line-height: 1;
+      }
+      .position {
+        font-size: 13px;
+        color: #888;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 }
-.trending_article{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding-bottom: 112px;
-    padding-top: 56px;
+.trending_vertical {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 30%;
+  .img_box {
+    margin-bottom: 24px;
+    height: 256px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+      @media (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .trending_data {
+    .category {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 1rem;
+
+      .name {
+        color: #222;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 0 5px;
+      }
+
+      .create_date {
+        color: #999;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0 5px;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      width: 95%;
+      margin-bottom: 8px;
+    }
+
+    .short_description {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+
+      .authoe_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: rgb(24, 166, 209);
+        margin-right: 10px;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .name {
+        font-weight: 400;
+        color: #000;
+        font-weight: 700;
+        display: block;
+        line-height: 1;
+      }
+
+      .position {
+        font-size: 13px;
+        color: #888;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+.trending_article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 112px;
+  padding-top: 56px;
 }

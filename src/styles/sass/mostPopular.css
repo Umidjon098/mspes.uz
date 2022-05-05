@@ -1,0 +1,127 @@
+.most_popular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.most_popular .img_box {
+  margin-bottom: 24px;
+  height: 514px;
+  width: 100%;
+}
+
+.most_popular .img_box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+@media (max-width: 992px) {
+  .most_popular .img_box img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .most_popular .img_box {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.most_popular .trending_data .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.most_popular .trending_data .category .name {
+  color: #222;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+.most_popular .trending_data .category .create_date {
+  color: #999;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+.most_popular .trending_data .title {
+  font-size: 18px;
+  font-weight: 700;
+  width: 95%;
+  margin-bottom: 8px;
+}
+
+.most_popular .trending_data .short_description {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #888;
+  font-size: 14px;
+}
+
+.most_popular .trending_data .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.most_popular .trending_data .author .authoe_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #18a6d1;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.most_popular .trending_data .author .name {
+  font-weight: 400;
+  color: #000;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.most_popular .trending_data .author .position {
+  font-size: 13px;
+  color: #888;
+}
+
+@media (max-width: 700px) {
+  .most_popular {
+    padding: 0 12px;
+  }
+}
+/*# sourceMappingURL=mostPopular.css.map */

@@ -1,52 +1,54 @@
 @import "./sass/navbar";
 @import "./sass/trending";
+@import "./sass/mostPopular";
+@import "./sass/smallArticle";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',
-    sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-    max-width: 100%;
-    margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
-.section{
-    margin-top: 56px !important;
+.section {
+  margin-top: 56px !important;
+  overflow: hidden;
 }
- .heading {
-    font-size: 40px;
-    font-weight: 700;
+.heading {
+  font-size: 40px;
+  font-weight: 700;
 }
-ul{
-    margin: 0;
-    padding: 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 1400px){
-    .container {
-        max-width: 1320px;
-    }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 }
-@media (min-width: 1200px) and (max-width: 1400px){
-    .container {
-        max-width: 1140px;
-    }
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
 }
-@media (min-width: 992px) and (max-width: 1200px){
-    .container {
-        max-width: 960px;
-    }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
+  .container {
+    max-width: 720px;
+  }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
+  .container {
+    max-width: 540px;
+  }
 }
