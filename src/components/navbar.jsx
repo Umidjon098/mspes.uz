@@ -1,8 +1,13 @@
-import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
+import { SearchOutlined } from "@ant-design/icons";
+import { Drawer } from "antd";
 import { useContext } from "react";
 import { MainContext } from "../context/MainContext";
 const Navbar = () => {
   const { setVisible, visible } = useContext(MainContext);
+
+  const onClose = () => {
+    setVisible(false);
+  };
   return (
     <div className="navbar">
       <div className="container">
@@ -37,16 +42,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* <div
-        className={visible ? "dark_overlay active" : "dark_overlay"}
-        onClick={() => setVisible(false)}
-      ></div>
-      <div
-        className={visible ? "mobile_menu_links active" : "mobile_menu_links"}
-      >
-        <div className="close_btn" onClick={() => setVisible(false)}>
-          <CloseOutlined />
-        </div>
+      <Drawer title=""  onClose={onClose} visible={visible} >
+        <div className="mobile_links">
         <ul>
           <li>Bosh sahifa</li>
           <li>Tahririyat a’zolari</li>
@@ -54,7 +51,9 @@ const Navbar = () => {
           <li>Arxiv</li>
           <li>Indeksatsiya</li>
         </ul>
-      </div> */}
+        </div>
+      
+      </Drawer>
     </div>
   );
 };

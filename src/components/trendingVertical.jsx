@@ -1,6 +1,7 @@
 import ImageItem from "../assets/images/xpost_lg_2.jpg.pagespeed.ic.t0aph6N0mC.webp";
 
 const Trending = () => {
+
   return (
     <div className="trending_vertical">
       <div className="img_box">

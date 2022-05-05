@@ -15,8 +15,8 @@
 }
 
 .small_article .img_box img {
-  width: 150px;
-  height: 100px;
+  width: 180px;
+  height: 140px;
   border-radius: 7px;
   -o-object-fit: cover;
      object-fit: cover;

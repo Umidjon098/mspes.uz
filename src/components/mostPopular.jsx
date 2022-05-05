@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import ImageItem from "../assets/images/xpost_lg_2.jpg.pagespeed.ic.t0aph6N0mC.webp";
 
 // Import Swiper React components
