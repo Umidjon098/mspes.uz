@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  article-app:
+    container_name: article-app-ui-prod
+    build:
+      context: .
+    ports:
+      - 80:80
