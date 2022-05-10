@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   min-height: 385px;
+  position: relative;
   .img_box {
     margin-right: 3rem;
     img {
-      width: 440px;
-      height: 385px;
+      width: 380px;
+      height: 440px;
       border-radius: 7px;
       @media (max-width: 992px) {
         width: 100%;
@@ -19,6 +20,8 @@
     }
   }
   .trending_data {
+    position: relative;
+    min-height: 385px;
     .category {
       display: flex;
       align-items: center;
@@ -42,6 +45,12 @@
       font-weight: 700;
       width: 95%;
       margin-bottom: 8px;
+      color: #222;
+      transition: all ease 0.3s;
+      line-height: 50px;
+      &:hover {
+        color: #666;
+      }
       @media (max-width: 1400px) {
         font-size: 30px;
       }
@@ -83,6 +92,14 @@
   }
   @media (max-width: 992px) {
     flex-direction: column;
+  }
+  .new-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+      width: 60px;
+    }
   }
 }
 .trending_vertical {
@@ -133,27 +150,40 @@
     .title {
       font-size: 18px;
       font-weight: 700;
-      width: 95%;
       margin-bottom: 8px;
+      display: -webkit-box;
+      max-width: 100%;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      &:hover {
+        -webkit-line-clamp: 200;
+      }
     }
 
     .short_description {
-      width: 100%;
       margin-bottom: 1rem;
       color: #888;
       font-size: 14px;
+      display: -webkit-box;
+      max-width: 100%;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      &:hover {
+        -webkit-line-clamp: 200;
+      }
     }
 
     .author {
       display: flex;
       align-items: center;
-
       .authoe_img {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 45px;
-        height: 45px;
+        min-width: 45px;
+        min-height: 45px;
         border-radius: 50%;
         background-color: rgb(24, 166, 209);
         margin-right: 10px;
@@ -167,7 +197,7 @@
         color: #000;
         font-weight: 700;
         display: block;
-        line-height: 1;
+        line-height: 1.5;
       }
 
       .position {
@@ -186,4 +216,22 @@
   gap: 40px;
   padding-bottom: 112px;
   padding-top: 56px;
+}
+
+.all_count {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  gap: 30px;
+  .item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
 }
