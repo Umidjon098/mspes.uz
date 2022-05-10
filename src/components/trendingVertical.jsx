@@ -22,7 +22,6 @@ const Trending = ({ currentJournal }) => {
         ) : (
           <>
             {currentJournal.map((data, key) => {
-              console.log(data);
               return (
                 <div key={key} className="trending_vertical">
                   <div className="img_box">

@@ -65,8 +65,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 45px;
-        height: 45px;
+        min-width: 45px;
+        min-height: 45px;
         border-radius: 50%;
         background-color: rgb(24, 166, 209);
         margin-right: 10px;

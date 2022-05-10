@@ -1,24 +1,22 @@
-import ImageItem from "../assets/images/xpost_lg_2.jpg.pagespeed.ic.t0aph6N0mC.webp";
-
-const SmallArticle = () => {
+const SmallArticle = ({ data }) => {
+  const getDate = (date) => {
+    return <div>{new Date(date).toString().slice(4, 15)}</div>;
+  };
   return (
     <div className="small_article">
       <div className="img_box">
-        <img src={ImageItem} alt="lorem" />
+        <img src={data.photo_url} alt="lorem" />
       </div>
       <div className="trending_data">
         <div className="category">
-          <div className="name">Business, Travel </div>-
-          <div className="create_date">July 2, 2020</div>
+          <div className="name">{data.category.title}</div>-
+          <div className="create_date">{getDate(data.published_date)}</div>
         </div>
-        <div className="title">
-          Your most unhappy customers are your greatest source of learning.
-        </div>
+        <div className="title">{data.title}</div>
         <div className="author">
-          <div className="authoe_img">J</div>
+          <div className="authoe_img">{data.authors?.slice(0, 1)}</div>
           <div className="outhor_data">
-            <div className="name">John Doe</div>
-            <div className="position">CEO and Founder</div>
+            <div className="name">{data.authors}</div>
           </div>
         </div>
       </div>

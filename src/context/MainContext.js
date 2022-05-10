@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ArticleApi } from "../api/main/article";
+import { CategoryApi } from "../api/main/category";
 import { JournalApi } from "../api/main/journals";
 
 export const MainContext = React.createContext();
@@ -7,6 +9,9 @@ const MainContextProvider = ({ children }) => {
   const [visible, setVisible] = useState(false);
   const [journal, setJournal] = useState([]);
   const [currentJournal, setCurrentJournal] = useState([]);
+  const [mostPopular, setMostPopular] = useState([]);
+  const [category, setCategory] = useState([]);
+  const [articleByCategory, setArticleByCategory] = useState([]);
 
   const getJournals = () => {
     JournalApi.get().then((res) => {
@@ -20,7 +25,21 @@ const MainContextProvider = ({ children }) => {
       });
     });
   };
-
+  const getMostPopular = () => {
+    ArticleApi.get({ most_popular: true }).then((res) => {
+      setMostPopular(res);
+    });
+  };
+  const getCategory = () => {
+    CategoryApi.get().then((res) => {
+      setCategory(res);
+    });
+  };
+  const getArticleByCategory = (id) => {
+    ArticleApi.get({ category_id: id }).then((res) => {
+      setArticleByCategory(res);
+    });
+  };
   return (
     <MainContext.Provider
       value={{
@@ -30,6 +49,12 @@ const MainContextProvider = ({ children }) => {
         journal,
         getCurrentJournal,
         currentJournal,
+        getMostPopular,
+        mostPopular,
+        category,
+        getCategory,
+        getArticleByCategory,
+        articleByCategory,
       }}
     >
       {children}

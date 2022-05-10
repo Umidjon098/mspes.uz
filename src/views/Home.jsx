@@ -1,4 +1,4 @@
-import { Empty } from "antd";
+import { Empty, Tag } from "antd";
 import React, { useEffect, useContext } from "react";
 import MostPopular from "../components/mostPopular";
 import SmallArticle from "../components/smallArtivle";
@@ -6,12 +6,32 @@ import TrendingHorizontal from "../components/trendingHorizontal";
 import TrendingVertical from "../components/trendingVertical";
 import { MainContext } from "../context/MainContext";
 function Home() {
-  const { getJournals, journal, getCurrentJournal, currentJournal } =
-    useContext(MainContext);
+  const {
+    getJournals,
+    journal,
+    getCurrentJournal,
+    currentJournal,
+    getMostPopular,
+    mostPopular,
+    category,
+    getCategory,
+    getArticleByCategory,
+    articleByCategory,
+  } = useContext(MainContext);
   useEffect(() => {
     getJournals();
     getCurrentJournal();
+    getMostPopular();
+    getCategory();
+    getArticleByCategory(category[0]?.id);
   }, []);
+
+  const getColor = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  };
+  const onCLick = (id) => {
+    getArticleByCategory(id);
+  };
   return (
     <>
       <div className="container section">
@@ -29,13 +49,27 @@ function Home() {
             <h2 className="heading">Eng ko'p yuklab olingan</h2>
           </div>
         </div>
-        <MostPopular />
+        <MostPopular mostPopular={mostPopular} />
       </div>
-      <div className="section container category_box">
-        <SmallArticle />
-        <SmallArticle />
-        <SmallArticle />
-        <SmallArticle />
+      <div className="section container ">
+        <div className="category-btn">
+          {category?.map((data, key) => {
+            return (
+              <Tag
+                key={key}
+                color={getColor()}
+                onClick={() => onCLick(data.id)}
+              >
+                {data.title}
+              </Tag>
+            );
+          })}
+        </div>
+        <div className="category_box">
+          {articleByCategory?.map((data, key) => {
+            return <SmallArticle data={data} />;
+          })}
+        </div>
       </div>
     </>
   );
