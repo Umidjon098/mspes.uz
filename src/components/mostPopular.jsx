@@ -1,11 +1,6 @@
 import React from "react";
-import ImageItem from "../assets/images/xpost_lg_2.jpg.pagespeed.ic.t0aph6N0mC.webp";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
 import { Pagination } from "swiper";
-
 export default function MostPopular({ mostPopular }) {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
@@ -18,11 +13,9 @@ export default function MostPopular({ mostPopular }) {
       modules={[Pagination]}
       spaceBetween={30}
       breakpoints={{
-        // when window width is >= 640px
         640: {
           slidesPerView: 1,
         },
-        // when window width is >= 768px
         700: {
           slidesPerView: 2,
         },

@@ -7,6 +7,9 @@ export class JournalApi {
   static get(params) {
     return mainCaller(this.endpoint, HTTPMethods.GET, null, null, params);
   }
+  static getID(id) {
+    return mainCaller(`${this.endpoint + id}/`, HTTPMethods.GET, null, null);
+  }
   static getOne(id) {
     return mainCaller(
       `${this.endpoint + id}/articles`,

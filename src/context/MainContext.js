@@ -8,6 +8,7 @@ export const MainContext = React.createContext();
 const MainContextProvider = ({ children }) => {
   const [visible, setVisible] = useState(false);
   const [journal, setJournal] = useState([]);
+  const [oneJournal, setOneJournal] = useState([]);
   const [currentJournal, setCurrentJournal] = useState([]);
   const [mostPopular, setMostPopular] = useState([]);
   const [category, setCategory] = useState([]);
@@ -16,6 +17,11 @@ const MainContextProvider = ({ children }) => {
   const getJournals = () => {
     JournalApi.get().then((res) => {
       setJournal(res);
+    });
+  };
+  const getOneJournal = (id) => {
+    JournalApi.getID(id).then((res) => {
+      setOneJournal(res);
     });
   };
   const getCurrentJournal = () => {
@@ -55,6 +61,8 @@ const MainContextProvider = ({ children }) => {
         getCategory,
         getArticleByCategory,
         articleByCategory,
+        getOneJournal,
+        oneJournal,
       }}
     >
       {children}

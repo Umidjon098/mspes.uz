@@ -5,10 +5,8 @@ import {
   DownloadOutlined,
   FilePdfOutlined,
 } from "@ant-design/icons";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Autoplay, Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
@@ -16,7 +14,9 @@ const Trending = ({ journal = [] }) => {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
-
+  const setID = (id) => {
+    localStorage.setItem("id", id);
+  };
   return (
     <Swiper
       pagination={true}
@@ -41,7 +41,11 @@ const Trending = ({ journal = [] }) => {
                     {getDate(data.published_date)}
                   </div>
                 </div>
-                <Link to="/journal_detail" className="title">
+                <Link
+                  to="/journal_detail"
+                  className="title"
+                  onClick={() => setID(data.id)}
+                >
                   {data.title}
                 </Link>
                 <div className="short_description">{data.description}</div>

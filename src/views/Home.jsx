@@ -1,4 +1,4 @@
-import { Empty, Tag } from "antd";
+import { Skeleton, Tag } from "antd";
 import React, { useEffect, useContext } from "react";
 import MostPopular from "../components/mostPopular";
 import SmallArticle from "../components/smallArtivle";
@@ -40,18 +40,50 @@ function Home() {
             <h2 className="heading">Jurnallar</h2>
           </div>
         </div>
-        <TrendingHorizontal journal={journal} />
+        {journal?.length === 0 ? (
+          <Skeleton active avatar paragraph={{ rows: 12 }} />
+        ) : (
+          <TrendingHorizontal journal={journal} />
+        )}
       </div>
-      <TrendingVertical currentJournal={currentJournal} />
+      <div className="container section">
+        <div className="row justify-content-center">
+          <div className="col-lg-7 text-center">
+            <h2 className="heading">Joriy Son</h2>
+          </div>
+        </div>
+        {currentJournal?.length === 0 ? (
+          <div style={{ display: "flex", gap: "50px" }}>
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+          </div>
+        ) : (
+          <TrendingVertical currentJournal={currentJournal} />
+        )}
+      </div>
       <div className="section">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-7 text-center">
             <h2 className="heading">Eng ko'p yuklab olingan</h2>
           </div>
         </div>
-        <MostPopular mostPopular={mostPopular} />
+        {mostPopular?.length === 0 ? (
+          <div style={{ display: "flex", gap: "50px", padding: "0 100px" }}>
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+          </div>
+        ) : (
+          <MostPopular mostPopular={mostPopular} />
+        )}
       </div>
       <div className="section container ">
+        <div className="row justify-content-center mb-5">
+          <div className="col-lg-7 text-center">
+            <h2 className="heading"> By Category</h2>
+          </div>
+        </div>
         <div className="category-btn">
           {category?.map((data, key) => {
             return (
@@ -66,9 +98,23 @@ function Home() {
           })}
         </div>
         <div className="category_box">
-          {articleByCategory?.map((data, key) => {
-            return <SmallArticle data={data} />;
-          })}
+          {articleByCategory?.length === 0 ? (
+            <div
+              style={{
+                display: "flex",
+                gap: "50px",
+                width: "100%",
+              }}
+            >
+              <Skeleton active avatar paragraph={{ rows: 5 }} />
+              <Skeleton active avatar paragraph={{ rows: 5 }} />
+            </div>
+          ) : (
+            articleByCategory?.map((data, key) => {
+              return <SmallArticle data={data} />;
+            })
+          )}
+          {}
         </div>
       </div>
     </>
