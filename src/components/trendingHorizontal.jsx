@@ -46,7 +46,7 @@ const Trending = ({ journal = [] }) => {
                   className="title"
                   onClick={() => setID(data.id)}
                 >
-                  {data.title}
+                  {`${data.title} № ${data.number}`}
                 </Link>
                 <div className="short_description">{data.description}</div>
                 <div className="category">

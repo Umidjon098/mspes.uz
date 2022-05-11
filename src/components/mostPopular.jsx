@@ -1,11 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { Link } from "react-router-dom";
 export default function MostPopular({ mostPopular }) {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
-
+  const setID = (id) => {
+    localStorage.setItem("id", id);
+  };
   return (
     <Swiper
       centeredSlides={true}
@@ -35,7 +38,13 @@ export default function MostPopular({ mostPopular }) {
                     {getDate(data.published_date)}
                   </div>
                 </div>
-                <div className="title">{data.title}</div>
+                <Link
+                  to="/article_detail"
+                  className="title"
+                  onClick={() => setID(data.id)}
+                >
+                  {data.title}
+                </Link>
                 <div className="short_description">{data.annotation}</div>
                 <div className="author">
                   <div className="authoe_img">{data.authors?.slice(0, 1)}</div>

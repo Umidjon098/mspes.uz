@@ -26,7 +26,7 @@
       display: flex;
       align-items: center;
       font-family: "Poppins", sans-serif;
-      margin-bottom: 1rem;
+      margin-bottom: 4px;
 
       .name {
         color: #222;
@@ -47,7 +47,17 @@
       font-size: 18px;
       font-weight: 700;
       width: 95%;
-      margin-bottom: 8px;
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      max-width: 90%;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-transform: lowercase;
+      color: #222;
+      &:hover {
+        color: #666;
+      }
     }
 
     .short_description {
@@ -55,6 +65,11 @@
       margin-bottom: 1rem;
       color: #888;
       font-size: 14px;
+      display: -webkit-box;
+      max-width: 90%;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .author {

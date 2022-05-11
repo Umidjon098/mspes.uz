@@ -1,8 +1,8 @@
 .navbar {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .navbar .container .left_side {
-  width: 33%;
+  width: 10%;
 }
 
 @media (max-width: 490px) {
@@ -29,13 +29,13 @@
 }
 
 .navbar .container .right_side {
-  width: 66%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -144,6 +144,14 @@
   .navbar .menu_links ul li {
     font-size: 14px;
   }
+}
+
+.navbar .menu_links ul li a {
+  color: #000;
+}
+
+.navbar .menu_links ul li a:hover {
+  color: #ccc;
 }
 
 @media (max-width: 1200px) {

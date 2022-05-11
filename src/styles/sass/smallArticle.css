@@ -15,8 +15,8 @@
 }
 
 .small_article .img_box img {
-  width: 180px;
-  height: 140px;
+  width: 150px;
+  height: 96px;
   border-radius: 7px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -44,6 +44,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 4px;
 }
 
 .small_article .trending_data .category .name {
@@ -65,14 +66,17 @@
   font-weight: 700;
   margin-bottom: 8px;
   display: -webkit-box;
-  max-width: 90%;
+  max-width: 85%;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 22px;
+  text-transform: lowercase;
+  color: #222;
 }
 
 .small_article .trending_data .title:hover {
-  -webkit-line-clamp: 200;
+  color: #666;
 }
 
 @media (max-width: 1400px) {
@@ -122,6 +126,11 @@
   font-weight: 700;
   display: block;
   line-height: 1;
+  display: -webkit-box;
+  max-width: 90%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .small_article .trending_data .author .position {

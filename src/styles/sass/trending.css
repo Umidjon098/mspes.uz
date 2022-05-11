@@ -72,6 +72,11 @@
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   line-height: 50px;
+  display: -webkit-box;
+  max-width: 90%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .trending_horizontal .trending_data .title:hover {
@@ -89,6 +94,11 @@
   margin-bottom: 1rem;
   color: #888;
   font-size: 14px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .trending_horizontal .trending_data .author {
@@ -199,8 +209,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 4px;
 }
 
 .trending_vertical .trending_data .category .name {
@@ -220,16 +233,19 @@
 .trending_vertical .trending_data .title {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+  line-height: 20px;
   display: -webkit-box;
   max-width: 100%;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  color: #222;
 }
 
 .trending_vertical .trending_data .title:hover {
-  -webkit-line-clamp: 200;
+  color: #666;
 }
 
 .trending_vertical .trending_data .short_description {
@@ -237,14 +253,10 @@
   color: #888;
   font-size: 14px;
   display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 6;
+  max-width: 90%;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.trending_vertical .trending_data .short_description:hover {
-  -webkit-line-clamp: 200;
 }
 
 .trending_vertical .trending_data .author {
@@ -282,6 +294,11 @@
   font-weight: 700;
   display: block;
   line-height: 1.5;
+  display: -webkit-box;
+  max-width: 90%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .trending_vertical .trending_data .author .position {
@@ -334,5 +351,13 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+
+.detail .title {
+  display: block !important;
+}
+
+.detail .short_description {
+  display: block !important;
 }
 /*# sourceMappingURL=trending.css.map */

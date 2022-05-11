@@ -1,138 +1,140 @@
 $primaryColor: #000;
 $secondaryColor: #ccc;
 .navbar {
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow-x: hidden;
-   .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .left_side{
-            width: 33%;
-            @media(max-width: 490px) {
-                width: 100%;
-            }
-         
-        }
-        .right_side{
-            width: 66%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @media(max-width: 490px) {
-            width: 100%;
-            }
-            @media(min-width: 490px) and (max-width: 992px) {
-                width: 50%;
-            }
-        }
-        @media(max-width: 490px) {
-            flex-direction: column-reverse;
-        }
-   }
-   .logo{
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 22px;
+  padding-bottom: 22px;
+  overflow-x: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left_side {
+      width: 10%;
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+    }
+    .right_side {
+      width: 90%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+      @media (min-width: 490px) and (max-width: 992px) {
+        width: 50%;
+      }
+    }
+    @media (max-width: 490px) {
+      flex-direction: column-reverse;
+    }
+  }
+  .logo {
     font-size: 20px;
     color: $primaryColor;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-   }
-   .search{
-       border: 1px solid $secondaryColor;
-       padding: 5px 10px;
-       border-radius: 30px;
-       width: 100%;
-       max-width: 300px;
-       &_form{
-           display: flex;
-       }
-       &_input{
-           display: flex;
-           align-items: center;
-           position: relative;
-           width: 100%;
-           height: 100%;
-           input{
-               width: 100%;
-               height: 100%;
-               border: none;
-               outline: none;
-               padding: 0 10px;
-           }
-       }
-       &_icon{
-           span{
-               color: $secondaryColor !important;
-           }
-           margin-top: -5px;
-       }
-        @media(max-width: 490px) {
-            max-width: 100%;
-            margin-top: 16px;
-        }
-   }
-    .menu_links{ 
-        ul{
-            display: flex;
-            width: 100%;
-            gap: 40px;
-            li{
-                list-style: none;
-                cursor: pointer;
-                color: $primaryColor;
-                font-size: 16px;
-                transition: all 0.3s ease;
-                &:hover{
-                    color: $secondaryColor;
-                }
-                @media(max-width: 1200px) {
-                font-size: 14px;
-                }
-            }
-            @media(max-width: 1200px) {
-                gap: 20px;
-            }
-        }
-    @media(max-width: 992px) {
-        display: none;
+  }
+  .search {
+    border: 1px solid $secondaryColor;
+    padding: 5px 10px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 300px;
+    &_form {
+      display: flex;
     }
+    &_input {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+      }
     }
-    .burger{
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        transition: all 0.2s ease;
-        cursor: pointer;
-        span{
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: $primaryColor;
-        }
-        &:hover{
-            gap: 4px;
-        }
-        @media(max-width: 992px) {
-            display: flex;
-        }
+    &_icon {
+      span {
+        color: $secondaryColor !important;
+      }
+      margin-top: -5px;
     }
-    @media(max-width: 576px) {
-        padding: 20px 24px;
+    @media (max-width: 490px) {
+      max-width: 100%;
+      margin-top: 16px;
     }
-
-}
-.mobile_links{
-    ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 30px;
+  }
+  .menu_links {
+    ul {
+      display: flex;
+      width: 100%;
+      gap: 40px;
+      li {
         list-style: none;
+        cursor: pointer;
+        color: $primaryColor;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $secondaryColor;
+        }
+        @media (max-width: 1200px) {
+          font-size: 14px;
+        }
+        a {
+          color: $primaryColor;
+          &:hover {
+            color: $secondaryColor;
+          }
+        }
+      }
+      @media (max-width: 1200px) {
+        gap: 20px;
+      }
     }
-
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $primaryColor;
+    }
+    &:hover {
+      gap: 4px;
+    }
+    @media (max-width: 992px) {
+      display: flex;
+    }
+  }
+  @media (max-width: 576px) {
+    padding: 20px 24px;
+  }
 }
-  
+.mobile_links {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+  }
+}

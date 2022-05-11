@@ -13,6 +13,7 @@ const MainContextProvider = ({ children }) => {
   const [mostPopular, setMostPopular] = useState([]);
   const [category, setCategory] = useState([]);
   const [articleByCategory, setArticleByCategory] = useState([]);
+  const [articleDetail, setArticleDetail] = useState([]);
 
   const getJournals = () => {
     JournalApi.get().then((res) => {
@@ -46,6 +47,11 @@ const MainContextProvider = ({ children }) => {
       setArticleByCategory(res);
     });
   };
+  const getArticleDetail = (id) => {
+    ArticleApi.getOne(id).then((res) => {
+      setArticleDetail(res);
+    });
+  };
   return (
     <MainContext.Provider
       value={{
@@ -63,6 +69,8 @@ const MainContextProvider = ({ children }) => {
         articleByCategory,
         getOneJournal,
         oneJournal,
+        getArticleDetail,
+        articleDetail,
       }}
     >
       {children}

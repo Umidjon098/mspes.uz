@@ -7,4 +7,7 @@ export class ArticleApi {
   static get(params) {
     return mainCaller(this.endpoint, HTTPMethods.GET, null, null, params);
   }
+  static getOne(id) {
+    return mainCaller(`${this.endpoint}/${id}/`, HTTPMethods.GET);
+  }
 }

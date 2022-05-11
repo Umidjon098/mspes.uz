@@ -6,7 +6,6 @@ import {
   DownloadOutlined,
   FilePdfOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 function JournalDetail() {
@@ -55,7 +54,7 @@ function JournalDetail() {
           <h2 className="heading">Journal Detail</h2>
         </div>
       </div>
-      <div className="trending_horizontal">
+      <div className="trending_horizontal detail">
         <div className="img_box">
           <img src={oneJournal.photo_url} alt="lorem" />
         </div>
@@ -66,9 +65,7 @@ function JournalDetail() {
               {getDate(oneJournal.published_date)}
             </div>
           </div>
-          <Link to="/journal_detail" className="title">
-            {oneJournal.title}
-          </Link>
+          <div className="title">{oneJournal.title}</div>
           <div className="short_description">{oneJournal.description}</div>
           <div className="category">
             <div className="name">Qabul boshlanish sanasi: </div>
@@ -78,10 +75,6 @@ function JournalDetail() {
             <div className="name">Qabul tugash sanasi: </div>
             <div className="create_date">{getDate(oneJournal.to_date)}</div>
           </div>
-          {/* <div className="category">
-                  <div className="name">Ko'rishlar soni: </div>
-                  <div className="create_date">{oneJournal.views}</div>
-                </div> */}
           <div className="all_count">
             <div className="item">
               <div className="icon">
