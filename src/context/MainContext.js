@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ArticleApi } from "../api/main/article";
 import { CategoryApi } from "../api/main/category";
 import { JournalApi } from "../api/main/journals";
+import { MemberApi } from "../api/main/member";
+import { IndexingApi } from "../api/main/indexing";
 
 export const MainContext = React.createContext();
 
@@ -14,6 +16,8 @@ const MainContextProvider = ({ children }) => {
   const [category, setCategory] = useState([]);
   const [articleByCategory, setArticleByCategory] = useState([]);
   const [articleDetail, setArticleDetail] = useState([]);
+  const [member, setMember] = useState([]);
+  const [indexing, setIndexing] = useState([]);
 
   const getJournals = () => {
     JournalApi.get().then((res) => {
@@ -52,6 +56,16 @@ const MainContextProvider = ({ children }) => {
       setArticleDetail(res);
     });
   };
+  const getMember = () => {
+    MemberApi.get().then((res) => {
+      setMember(res);
+    });
+  };
+  const getIndexing = () => {
+    IndexingApi.get().then((res) => {
+      setIndexing(res);
+    });
+  };
   return (
     <MainContext.Provider
       value={{
@@ -71,6 +85,10 @@ const MainContextProvider = ({ children }) => {
         oneJournal,
         getArticleDetail,
         articleDetail,
+        getMember,
+        member,
+        getIndexing,
+        indexing,
       }}
     >
       {children}

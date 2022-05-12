@@ -97,14 +97,13 @@ function JournalDetail() {
               </div>
               <div className="value">{oneJournal.count_articles}</div>
             </div>
-            <div
-              className="item"
-              onClick={() => FileDownload(oneJournal.file_url)}
-            >
-              <div className="icon">
-                <DownloadOutlined />
-                Yuklab olish
-              </div>
+          </div>
+          <div
+            className="download"
+            onClick={() => FileDownload(oneJournal.file_url)}
+          >
+            <div className="icon">
+              <DownloadOutlined />
             </div>
           </div>
         </div>

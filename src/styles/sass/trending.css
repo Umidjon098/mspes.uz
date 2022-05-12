@@ -353,11 +353,129 @@
   gap: 5px;
 }
 
-.detail .title {
+.detail {
+  border: 1px solid #f0f0f0;
+  border-radius: 7px;
+}
+
+.detail .trending_data {
+  position: relative;
+}
+
+.detail .trending_data .title {
+  max-width: 100% !important;
   display: block !important;
 }
 
 .detail .short_description {
   display: block !important;
+}
+
+.detail .trending_vertical {
+  max-width: 100% !important;
+  margin: auto 15%;
+}
+
+@media (max-width: 922px) {
+  .detail .trending_vertical {
+    margin: 0;
+  }
+}
+
+.detail .trending_vertical .img_box {
+  height: 460px;
+}
+
+@media (max-width: 922px) {
+  .detail .trending_vertical .img_box {
+    height: 250px;
+  }
+}
+
+.detail .download {
+  width: 100px;
+  height: 70px;
+  right: 50px;
+  bottom: 20px;
+  position: absolute;
+  border: 1px solid #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  color: #ccc;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.detail .download:hover {
+  background: #f0f0f0;
+}
+
+.indexing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5%;
+}
+
+.indexing .item {
+  position: relative;
+  width: 20%;
+  height: 150px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .indexing .item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .indexing .item {
+    width: 45%;
+    margin-bottom: 5%;
+  }
+}
+
+.indexing .item .name {
+  position: absolute;
+  bottom: 5px;
+  color: #888;
+  font-size: 18px;
+}
+
+.indexing .item .img_box {
+  width: 150px;
+}
+
+.indexing .item .img_box img {
+  width: 100%;
 }
 /*# sourceMappingURL=trending.css.map */
