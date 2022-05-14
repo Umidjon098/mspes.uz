@@ -12,6 +12,7 @@ const MainContextProvider = ({ children }) => {
   const [journal, setJournal] = useState([]);
   const [oneJournal, setOneJournal] = useState([]);
   const [currentJournal, setCurrentJournal] = useState([]);
+  const [currentJournalDetail, setCurrentJournalDetail] = useState([]);
   const [mostPopular, setMostPopular] = useState([]);
   const [category, setCategory] = useState([]);
   const [articleByCategory, setArticleByCategory] = useState([]);
@@ -31,6 +32,7 @@ const MainContextProvider = ({ children }) => {
   };
   const getCurrentJournal = () => {
     JournalApi.get({ is_new: true }).then((res) => {
+      setCurrentJournalDetail(res);
       JournalApi.getOne(res[0].id).then((data) => {
         setCurrentJournal(data);
       });
@@ -89,6 +91,7 @@ const MainContextProvider = ({ children }) => {
         member,
         getIndexing,
         indexing,
+        currentJournalDetail,
       }}
     >
       {children}

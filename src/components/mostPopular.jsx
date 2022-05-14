@@ -11,7 +11,6 @@ export default function MostPopular({ mostPopular }) {
   };
   return (
     <Swiper
-      centeredSlides={true}
       pagination={true}
       modules={[Pagination]}
       spaceBetween={30}

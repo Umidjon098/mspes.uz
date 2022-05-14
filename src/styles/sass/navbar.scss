@@ -104,6 +104,10 @@ $secondaryColor: #ccc;
     @media (max-width: 992px) {
       display: none;
     }
+    svg {
+      font-size: 12px;
+      margin-top: -5px;
+    }
   }
   .burger {
     display: none;

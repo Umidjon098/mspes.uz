@@ -9,20 +9,7 @@ const Navbar = () => {
   const onClose = () => {
     setVisible(false);
   };
-  const menu = (
-    <Menu
-      items={[
-        {
-          label: <Link to="/current_journal">Joriy son</Link>,
-          key: "0",
-        },
-        {
-          label: <Link to="/archive_journal">Arxiv</Link>,
-          key: "1",
-        },
-      ]}
-    />
-  );
+
   return (
     <div className="navbar">
       <div className="container">
@@ -49,10 +36,53 @@ const Navbar = () => {
                 <Link to="/members">Taxririyat a'zolari</Link>
               </li>
               <li>
-                <Link to="/author">Mualliflarga</Link>
+                <Dropdown
+                  overlay={
+                    <Menu
+                      items={[
+                        {
+                          label: (
+                            <Link to="/requirements"> Maqola talablari</Link>
+                          ),
+                          key: "0",
+                        },
+                        {
+                          label: (
+                            <Link to="/instruction">
+                              Tartib qoida va yoriqnomalar
+                            </Link>
+                          ),
+                          key: "1",
+                        },
+                      ]}
+                    />
+                  }
+                  trigger={["click"]}
+                >
+                  <Space>
+                    Mualliflarga
+                    <DownOutlined />
+                  </Space>
+                </Dropdown>
               </li>
               <li>
-                <Dropdown overlay={menu} trigger={["click"]}>
+                <Dropdown
+                  overlay={
+                    <Menu
+                      items={[
+                        {
+                          label: <Link to="/current_journal">Joriy son</Link>,
+                          key: "0",
+                        },
+                        {
+                          label: <Link to="/archive_journal">Arxiv</Link>,
+                          key: "1",
+                        },
+                      ]}
+                    />
+                  }
+                  trigger={["click"]}
+                >
                   <Space>
                     Arxiv
                     <DownOutlined />
