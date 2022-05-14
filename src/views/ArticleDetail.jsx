@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
-
+import { DownloadOutlined } from "@ant-design/icons";
+import { ArticleApi } from "../api/main/article";
 function ArticleDetail() {
   const { getArticleDetail, articleDetail } = useContext(MainContext);
 
@@ -17,6 +18,9 @@ function ArticleDetail() {
       getArticleDetail(id);
     }
   }, []);
+  const FileDownload = (id) => {
+    ArticleApi.download(id);
+  };
   return (
     <div className="container section">
       <div className="row justify-content-center mb-5">
@@ -46,6 +50,16 @@ function ArticleDetail() {
                 <div className="name">{articleDetail?.authors}</div>
               </div>
             </div>
+            <a
+              onClick={() => FileDownload(articleDetail.id)}
+              className="article_download"
+              href={articleDetail.file_url}
+              target="_blank"
+            >
+              <div className="icon">
+                <DownloadOutlined />
+              </div>
+            </a>
           </div>
         </div>
       </div>

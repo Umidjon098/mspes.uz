@@ -10,4 +10,7 @@ export class ArticleApi {
   static getOne(id) {
     return mainCaller(`${this.endpoint}/${id}/`, HTTPMethods.GET);
   }
+  static download(id) {
+    return mainCaller(`/api/v1/article/download/${id}/`, HTTPMethods.POST);
+  }
 }

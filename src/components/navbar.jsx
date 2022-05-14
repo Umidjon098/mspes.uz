@@ -1,30 +1,50 @@
-import { SearchOutlined, DownOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  DesktopOutlined,
+  PieChartOutlined,
+  FileOutlined,
+  TeamOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import { Drawer, Dropdown, Menu, Space } from "antd";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MainContext } from "../context/MainContext";
+import {} from "@ant-design/icons";
 const Navbar = () => {
   const { setVisible, visible } = useContext(MainContext);
 
   const onClose = () => {
     setVisible(false);
   };
+  function getItem(label, key, icon, children) {
+    return {
+      key,
+      icon,
+      children,
+      label,
+    };
+  }
 
+  const items = [
+    getItem("Option 1", "1", <PieChartOutlined />),
+    getItem("Option 2", "2", <DesktopOutlined />),
+    getItem("User", "sub1", <UserOutlined />, [
+      getItem("Tom", "3"),
+      getItem("Bill", "4"),
+      getItem("Alex", "5"),
+    ]),
+    getItem("Team", "sub2", <TeamOutlined />, [
+      getItem("Team 1", "6"),
+      getItem("Team 2", "8"),
+    ]),
+    getItem("Files", "9", <FileOutlined />),
+  ];
   return (
     <div className="navbar">
       <div className="container">
         <div className="left_side">
           <div className="logo">Mspes</div>
-          {/* <div className="search">
-            <form className="search_form">
-              <div className="search_input">
-                <div className="search_icon">
-                  <SearchOutlined />
-                </div>
-                <input placeholder="Search..." type="search" />
-              </div>
-            </form>
-          </div> */}
         </div>
         <div className="right_side">
           <div className="menu_links">
@@ -103,15 +123,7 @@ const Navbar = () => {
         </div>
       </div>
       <Drawer title="" onClose={onClose} visible={visible}>
-        <div className="mobile_links">
-          <ul>
-            <li>Bosh sahifa</li>
-            <li>Tahririyat a’zolari</li>
-            <li>Mualliflarga</li>
-            <li>Arxiv</li>
-            <li>Indeksatsiya</li>
-          </ul>
-        </div>
+        <Menu defaultSelectedKeys={["1"]} mode="inline" items={items} />
       </Drawer>
     </div>
   );

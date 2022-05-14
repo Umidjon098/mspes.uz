@@ -18,4 +18,7 @@ export class JournalApi {
       null
     );
   }
+  static download(id) {
+    return mainCaller(`/api/v1/journal/download/${id}/`, HTTPMethods.POST);
+  }
 }

@@ -5,36 +5,14 @@ import {
   DownloadOutlined,
   FilePdfOutlined,
 } from "@ant-design/icons";
-import axios from "axios";
+import { JournalApi } from "../api/main/journals";
 
 function JurnalDetail({ oneJournal = {} }) {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
-  const FileDownload = (url) => {
-    axios(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/pdf",
-      },
-    })
-      .then((response) => response.blob())
-      .then((blob) => {
-        // Create blob link to download
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", `FileName.pdf`);
-
-        // Append to html link element page
-        document.body.appendChild(link);
-
-        // Start download
-        link.click();
-
-        // Clean up and remove the link
-        link.parentNode.removeChild(link);
-      });
+  const FileDownload = (id) => {
+    JournalApi.download(id);
   };
   return (
     <div>
@@ -82,14 +60,16 @@ function JurnalDetail({ oneJournal = {} }) {
               <div className="value">{oneJournal.count_articles}</div>
             </div>
           </div>
-          <div
+          <a
+            onClick={() => FileDownload(oneJournal.id)}
             className="download"
-            onClick={() => FileDownload(oneJournal.file_url)}
+            href={oneJournal.file_url}
+            target="_blank"
           >
             <div className="icon">
               <DownloadOutlined />
             </div>
-          </div>
+          </a>
         </div>
         {oneJournal.status === 1 && (
           <div className="new-tag">

@@ -418,6 +418,32 @@
   background: #f0f0f0;
 }
 
+.detail .article_download {
+  width: 100px;
+  height: 70px;
+  right: -120px;
+  bottom: -50px;
+  position: absolute;
+  border: 1px solid #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  color: #ccc;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.detail .article_download:hover {
+  background: #f0f0f0;
+}
+
 .indexing {
   display: -webkit-box;
   display: -ms-flexbox;
