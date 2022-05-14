@@ -2,11 +2,7 @@
 FROM node:18-alpine as build
 WORKDIR /article_app
 ENV PATH="/article_app/node_modules/.bin:$PATH"
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install
-COPY . ./
-RUN npm run build
+COPY build ./
 
 # production environment
 FROM nginx:stable-alpine
