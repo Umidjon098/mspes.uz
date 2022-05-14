@@ -54,7 +54,7 @@ const Trending = ({ journal = [] }) => {
                   <div className="create_date">{getDate(data.from_date)}</div>
                 </div>
                 <div className="category">
-                  <div className="name">Qabul tugash sanasi: </div>
+                  <div className="name">Дата поступления: </div>
                   <div className="create_date">{getDate(data.to_date)}</div>
                 </div>
                 {/* <div className="category">
@@ -65,21 +65,21 @@ const Trending = ({ journal = [] }) => {
                   <div className="item">
                     <div className="icon">
                       <EyeOutlined />
-                      Ko'rishlar:
+                      Количество просмотров:
                     </div>
                     <div className="value">{data.views}</div>
                   </div>
                   <div className="item">
                     <div className="icon">
                       <DownloadOutlined />
-                      Yuklashlar:
+                      Kоличество загрузок:
                     </div>
                     <div className="value">{data.downloads}</div>
                   </div>
                   <div className="item">
                     <div className="icon">
                       <FilePdfOutlined />
-                      Maqolalar:
+                      Cтатьи:
                     </div>
                     <div className="value">{data.count_articles}</div>
                   </div>

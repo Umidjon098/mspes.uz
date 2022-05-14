@@ -41,21 +41,21 @@ function JurnalDetail({ oneJournal = {} }) {
             <div className="item">
               <div className="icon">
                 <EyeOutlined />
-                Ko'rishlar:
+                Количество просмотров:
               </div>
               <div className="value">{oneJournal.views}</div>
             </div>
             <div className="item">
               <div className="icon">
                 <DownloadOutlined />
-                Yuklashlar:
+                Kоличество загрузок:
               </div>
               <div className="value">{oneJournal.downloads}</div>
             </div>
             <div className="item">
               <div className="icon">
                 <FilePdfOutlined />
-                Maqolalar:
+                Cтатьи:
               </div>
               <div className="value">{oneJournal.count_articles}</div>
             </div>
