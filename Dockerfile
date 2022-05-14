@@ -2,7 +2,7 @@
 FROM node:18-alpine as build
 WORKDIR /article_app
 ENV PATH="/article_app/node_modules/.bin:$PATH"
-COPY build ./
+COPY . ./
 
 # production environment
 FROM nginx:stable-alpine
