@@ -37,7 +37,7 @@ function Home() {
       <div className="container section">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-7 text-center">
-            <h2 className="heading">Jurnallar</h2>
+            <h2 className="heading">Журналы</h2>
           </div>
         </div>
         {journal?.length === 0 ? (
@@ -49,7 +49,7 @@ function Home() {
       <div className="container section">
         <div className="row justify-content-center">
           <div className="col-lg-7 text-center">
-            <h2 className="heading">Joriy Son</h2>
+            <h2 className="heading">Текущие статьи</h2>
           </div>
         </div>
         {currentJournal?.length === 0 ? (
@@ -65,7 +65,7 @@ function Home() {
       <div className="container section">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-7 text-center">
-            <h2 className="heading">Eng ko'p yuklab olingan</h2>
+            <h2 className="heading">Самые скачиваемые</h2>
           </div>
         </div>
         {mostPopular?.length === 0 ? (
@@ -81,7 +81,7 @@ function Home() {
       <div className="section container ">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-7 text-center">
-            <h2 className="heading"> By Category</h2>
+            <h2 className="heading">По категориям</h2>
           </div>
         </div>
         <div className="category-btn">

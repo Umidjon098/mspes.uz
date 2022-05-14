@@ -36,7 +36,7 @@ const Trending = ({ journal = [] }) => {
               </div>
               <div className="trending_data">
                 <div className="category">
-                  <div className="name">Chop etilgan sana</div>-
+                  <div className="name">Дата публикации</div>-
                   <div className="create_date">
                     {getDate(data.published_date)}
                   </div>
@@ -50,7 +50,7 @@ const Trending = ({ journal = [] }) => {
                 </Link>
                 <div className="short_description">{data.description}</div>
                 <div className="category">
-                  <div className="name">Qabul boshlanish sanasi: </div>
+                  <div className="name">Дата начала приема: </div>
                   <div className="create_date">{getDate(data.from_date)}</div>
                 </div>
                 <div className="category">

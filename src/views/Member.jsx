@@ -52,7 +52,7 @@ function Member() {
                       <>
                         <div>{data.status?.title}</div>
                         <div>{data.degree?.title}</div>
-                        <div>{data.title === 1 ? "Professor" : "Dotsent"}</div>
+                        <div>{data.title === 1 ? "Профессор" : "Доцент"}</div>
                       </>
                     }
                   />
