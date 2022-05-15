@@ -1,15 +1,22 @@
 import { DownOutlined } from "@ant-design/icons";
-import { Drawer, Dropdown, Menu, Space } from "antd";
+import { Drawer, Dropdown, Menu, Space, Select } from "antd";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MainContext } from "../context/MainContext";
 import {} from "@ant-design/icons";
 import Logo from "../assets/images/logo.jpg";
+import { lang } from "../util";
+
+const { Option } = Select;
 const Navbar = () => {
   const { setVisible, visible } = useContext(MainContext);
 
   const onClose = () => {
     setVisible(false);
+  };
+  const handleChange = (value) => {
+    window.location.reload();
+    return localStorage.setItem("lang", value);
   };
 
   return (
@@ -77,7 +84,17 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-
+          <div className="language">
+            {lang === "ru" ? (
+              <img src="https://img.icons8.com/color/30/000000/russian-federation.png" />
+            ) : (
+              <img src="https://img.icons8.com/officel/30/000000/kazakhstan.png" />
+            )}
+            <Select defaultValue={lang} onChange={handleChange}>
+              <Option value="ru">Русский</Option>
+              <Option value="kk">қазақ</Option>
+            </Select>
+          </div>
           <div className="burger" onClick={() => setVisible(true)}>
             <span></span>
             <span></span>

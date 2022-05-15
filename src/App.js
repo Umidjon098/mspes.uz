@@ -13,8 +13,14 @@ import Requirements from "./views/Requirements";
 import Instructions from "./views/Instructions";
 import { BackTop } from "antd";
 import ScrollToTop from "./components/ScrollToTop";
+import { useEffect } from "react";
+import { setInitLang } from "./configs/i18n";
+import { lang } from "./util";
 
 function App() {
+  useEffect(() => {
+    setInitLang(lang);
+  }, []);
   return (
     <MainContextProvider>
       <BrowserRouter>

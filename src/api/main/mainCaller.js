@@ -1,5 +1,6 @@
 import HTTPMethods from "../HTTPMethods";
 import axios from "axios";
+import { lang } from "../../util";
 
 export const mainUrl = "http://mspes.kz:81";
 
@@ -12,13 +13,14 @@ export default function mainCaller(
 ) {
   const _headers = {
     Accept: "application/json; charset=utf-8",
+    "Accept-Language": lang,
     ...headers,
   };
   const options = {
     method,
     url: mainUrl + path,
+    params: params,
   };
-  options.params = params;
 
   if (data) {
     options.data = data;
