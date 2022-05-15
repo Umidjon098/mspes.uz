@@ -22,7 +22,7 @@ function JurnalDetail({ oneJournal = {} }) {
         </div>
         <div className="trending_data">
           <div className="category">
-            <div className="name">Chop etilgan sana</div>-
+            <div className="name">Дата публикации</div>-
             <div className="create_date">
               {getDate(oneJournal.published_date)}
             </div>
@@ -30,32 +30,32 @@ function JurnalDetail({ oneJournal = {} }) {
           <div className="title">{oneJournal.title}</div>
           <div className="short_description">{oneJournal.description}</div>
           <div className="category">
-            <div className="name">Qabul boshlanish sanasi: </div>
+            <div className="name">Дата начала приема: </div>
             <div className="create_date">{getDate(oneJournal.from_date)}</div>
           </div>
           <div className="category">
-            <div className="name">Qabul tugash sanasi: </div>
+            <div className="name">Дата поступления: </div>
             <div className="create_date">{getDate(oneJournal.to_date)}</div>
           </div>
           <div className="all_count">
             <div className="item">
               <div className="icon">
                 <EyeOutlined />
-                Ko'rishlar:
+                Количество просмотров:
               </div>
               <div className="value">{oneJournal.views}</div>
             </div>
             <div className="item">
               <div className="icon">
                 <DownloadOutlined />
-                Yuklashlar:
+                Kоличество загрузок:
               </div>
               <div className="value">{oneJournal.downloads}</div>
             </div>
             <div className="item">
               <div className="icon">
                 <FilePdfOutlined />
-                Maqolalar:
+                Cтатьи:
               </div>
               <div className="value">{oneJournal.count_articles}</div>
             </div>

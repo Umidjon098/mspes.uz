@@ -15,7 +15,7 @@ function CurrentJournal() {
       <div className="container section">
         <div className="row justify-content-center">
           <div className="col-lg-7 text-center">
-            <h2 className="heading">Joriy Son</h2>
+            <h2 className="heading">Текущие статьи</h2>
           </div>
         </div>
         <div>

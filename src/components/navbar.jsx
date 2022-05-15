@@ -50,10 +50,10 @@ const Navbar = () => {
           <div className="menu_links">
             <ul>
               <li>
-                <Link to="/">Bosh sahifa</Link>
+                <Link to="/">Главная страница</Link>
               </li>
               <li>
-                <Link to="/members">Taxririyat a'zolari</Link>
+                <Link to="/members">Члены редколлегии</Link>
               </li>
               <li>
                 <Dropdown
@@ -62,14 +62,14 @@ const Navbar = () => {
                       items={[
                         {
                           label: (
-                            <Link to="/requirements"> Maqola talablari</Link>
+                            <Link to="/requirements"> Требования к статье</Link>
                           ),
                           key: "0",
                         },
                         {
                           label: (
                             <Link to="/instruction">
-                              Tartib qoida va yoriqnomalar
+                              Процессуальные нормы и правила
                             </Link>
                           ),
                           key: "1",
@@ -80,7 +80,7 @@ const Navbar = () => {
                   trigger={["click"]}
                 >
                   <Space>
-                    Mualliflarga
+                    Авторам
                     <DownOutlined />
                   </Space>
                 </Dropdown>
@@ -91,11 +91,11 @@ const Navbar = () => {
                     <Menu
                       items={[
                         {
-                          label: <Link to="/current_journal">Joriy son</Link>,
+                          label: <Link to="/current_journal">Текущий номер</Link>,
                           key: "0",
                         },
                         {
-                          label: <Link to="/archive_journal">Arxiv</Link>,
+                          label: <Link to="/archive_journal">Архив</Link>,
                           key: "1",
                         },
                       ]}
@@ -104,13 +104,13 @@ const Navbar = () => {
                   trigger={["click"]}
                 >
                   <Space>
-                    Arxiv
+                    Архив
                     <DownOutlined />
                   </Space>
                 </Dropdown>
               </li>
               <li>
-                <Link to="/indexing">Indeksatsiya</Link>
+                <Link to="/indexing">Индексация</Link>
               </li>
             </ul>
           </div>
