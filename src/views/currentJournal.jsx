@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
 import TrendingVertical from "../components/trendingVertical";
 import JurnalDetail from "../components/jurnalDetail";
+import {tl} from "../configs/i18n";
 function CurrentJournal() {
   const { currentJournal, currentJournalDetail, getCurrentJournal } =
     useContext(MainContext);
@@ -15,7 +16,7 @@ function CurrentJournal() {
       <div className="container section">
         <div className="row justify-content-center">
           <div className="col-lg-7 text-center">
-            <h2 className="heading">Текущие статьи</h2>
+            <h2 className="heading">{tl("current.article")}</h2>
           </div>
         </div>
         <div>

@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { JournalApi } from "../api/main/journals";
 import { Skeleton } from "antd";
+import {tl} from "../configs/i18n";
 
 function JurnalDetail({ oneJournal = {} }) {
   const getDate = (date) => {
@@ -26,7 +27,7 @@ function JurnalDetail({ oneJournal = {} }) {
           </div>
           <div className="trending_data">
             <div className="category">
-              <div className="name">Дата публикации</div>-
+              <div className="name">{tl("published.date")}</div>-
               <div className="create_date">
                 {getDate(oneJournal.published_date)}
               </div>
@@ -34,25 +35,25 @@ function JurnalDetail({ oneJournal = {} }) {
             <div className="title">{oneJournal.title}</div>
             <div className="short_description">{oneJournal.description}</div>
             <div className="category">
-              <div className="name">Дата начала приема: </div>
+              <div className="name">{tl("start.date")}: </div>
               <div className="create_date">{getDate(oneJournal.from_date)}</div>
             </div>
             <div className="category">
-              <div className="name">Дата поступления: </div>
+              <div className="name">{tl("end.date")}: </div>
               <div className="create_date">{getDate(oneJournal.to_date)}</div>
             </div>
             <div className="all_count">
               <div className="item">
                 <div className="icon">
                   <EyeOutlined />
-                  Количество просмотров:
+                  {tl("views")}:
                 </div>
                 <div className="value">{oneJournal.views}</div>
               </div>
               <div className="item">
                 <div className="icon">
                   <DownloadOutlined />
-                  Kоличество загрузок:
+                  {tl("download")}:
                 </div>
                 <div className="value">{oneJournal.downloads}</div>
               </div>

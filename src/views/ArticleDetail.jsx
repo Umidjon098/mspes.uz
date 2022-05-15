@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
 import { DownloadOutlined } from "@ant-design/icons";
 import { ArticleApi } from "../api/main/article";
+import {tl} from "../configs/i18n";
 function ArticleDetail() {
   const { getArticleDetail, articleDetail } = useContext(MainContext);
 
@@ -25,7 +26,7 @@ function ArticleDetail() {
     <div className="container section">
       <div className="row justify-content-center mb-5">
         <div className="col-lg-7 text-center">
-          <h2 className="heading">Детали статьи</h2>
+          <h2 className="heading">{tl("article.detail")}</h2>
         </div>
       </div>
       <div className=" trending_article detail">

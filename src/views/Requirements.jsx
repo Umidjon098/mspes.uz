@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography } from "antd";
+import {tl} from "../configs/i18n";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -7,17 +8,17 @@ function Requirements() {
   return (
     <div className="container section">
       <Typography>
-        <Title>Журнал принимает статьи по следующим направлениям:</Title>
+        <Title>{tl("requirements.title")}:</Title>
         <Paragraph>
           <ul>
-            <li>Точные науки</li>
-            <li>Естественные науки</li>
-            <li>Технические науки</li>
-            <li>Педагогические науки</li>
-            <li>Социальные и гуманитарные науки</li>
-            <li>Философские науки</li>
-            <li>Филологические науки</li>
-            <li>Экономические науки</li>
+            <li>{tl("category1")}</li>
+            <li>{tl("category2")}</li>
+            <li>{tl("category3")}</li>
+            <li>{tl("category4")}</li>
+            <li>{tl("category5")}</li>
+            <li>{tl("category6")}</li>
+            <li>{tl("category7")}</li>
+            <li>{tl("category8")}</li>
           </ul>
         </Paragraph>
         <Title level={3}>Примечание для авторов статьи:</Title>
