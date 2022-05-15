@@ -62,7 +62,7 @@
 }
 
 .small_article .trending_data .title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
   display: -webkit-box;
@@ -121,6 +121,7 @@
 }
 
 .small_article .trending_data .author .name {
+  font-size: 12px;
   font-weight: 400;
   color: #000;
   font-weight: 700;

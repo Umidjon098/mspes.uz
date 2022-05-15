@@ -1,7 +1,7 @@
 import { Skeleton, Tag } from "antd";
 import React, { useEffect, useContext } from "react";
 import MostPopular from "../components/mostPopular";
-import SmallArticle from "../components/smallArtivle";
+import SmallArticle from "../components/smallArticle";
 import TrendingHorizontal from "../components/trendingHorizontal";
 import TrendingVertical from "../components/trendingVertical";
 import { MainContext } from "../context/MainContext";
