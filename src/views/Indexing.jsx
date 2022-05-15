@@ -13,7 +13,7 @@ function Indexing() {
     <div className="container section">
       <div className="row justify-content-center mb-5">
         <div className="col-lg-7 text-center">
-          <h2 className="heading">Indexing</h2>
+          <h2 className="heading">Индексация</h2>
         </div>
       </div>
       <div className="indexing">
@@ -36,12 +36,11 @@ function Indexing() {
           indexing?.map((data, key) => {
             return (
               <div key={key} className="item">
-                <div className="img_box">
-                  <img src={data.photo_url} alt="Image" />
-                </div>
-                <div className="name">
-                  <div>{data.name}</div>
-                </div>
+                <a href={data.url} target="_blank">
+                  <div className="img_box">
+                    <img src={data.photo_url} alt="Image" />
+                  </div>
+                </a>
               </div>
             );
           })

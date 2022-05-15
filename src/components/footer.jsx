@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  FacebookOutlined,
-  YoutubeOutlined,
-  InstagramOutlined,
-  PhoneOutlined,
-  MailOutlined,
-} from "@ant-design/icons";
+import { PhoneOutlined, MailOutlined } from "@ant-design/icons";
 import { SettingsApi } from "../api/main/settings";
 import { Divider } from "antd";
 import Telegram from "../assets/images/telegram.png";
@@ -28,7 +22,7 @@ function Footer() {
   return (
     <>
       <Divider />
-      <div className="footer container">
+      <div className="footer container section">
         <div className="social">
           <div className="icon">
             <a href={settings.facebook} target="_blank">
