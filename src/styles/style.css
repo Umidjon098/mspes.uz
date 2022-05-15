@@ -26,8 +26,11 @@ ul {
   margin: 0 !important;
   padding: 0 !important;
 }
+
 .swiper-pagination {
-  bottom: -5px !important;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0 !important;
 }
 .footer {
   display: flex;
@@ -45,19 +48,16 @@ ul {
   margin-bottom: 40px;
 }
 .footer .social .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 40px;
   height: 40px;
-  position: relative;
-  background: #ccc;
-  border-radius: 40%;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.footer .social .icon:hover {
-  background: rgb(24, 166, 209);
-  color: #fff;
+.footer .social .icon img {
+  width: 100%;
+  object-fit: cover;
+}
+.footer .social .icon img:hover {
+  transform: scale(1.2);
 }
 .footer .widget {
   display: flex;
@@ -76,6 +76,11 @@ ul {
 }
 .ant-dropdown {
   width: 150px !important;
+}
+.show_more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 1400px) {
   .container {

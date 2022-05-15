@@ -1,7 +1,6 @@
-import { Avatar, Card, Skeleton } from "antd";
+import { Card, Skeleton } from "antd";
 import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
-const { Meta } = Card;
 
 function Indexing() {
   const { indexing, getIndexing } = useContext(MainContext);
@@ -18,18 +17,35 @@ function Indexing() {
         </div>
       </div>
       <div className="indexing">
-        {indexing?.map((data, key) => {
-          return (
-            <div key={key} className="item">
-              <div className="img_box">
-                <img src={data.photo_url} alt="Image" />
+        {indexing.length === 0 ? (
+          <div style={{ display: "flex", gap: 30 }}>
+            <Card style={{ width: 300 }}>
+              <Skeleton loading={true} avatar active></Skeleton>
+            </Card>
+            <Card style={{ width: 300 }}>
+              <Skeleton loading={true} avatar active></Skeleton>
+            </Card>
+            <Card style={{ width: 300 }}>
+              <Skeleton loading={true} avatar active></Skeleton>
+            </Card>
+            <Card style={{ width: 300 }}>
+              <Skeleton loading={true} avatar active></Skeleton>
+            </Card>
+          </div>
+        ) : (
+          indexing?.map((data, key) => {
+            return (
+              <div key={key} className="item">
+                <div className="img_box">
+                  <img src={data.photo_url} alt="Image" />
+                </div>
+                <div className="name">
+                  <div>{data.name}</div>
+                </div>
               </div>
-              <div className="name">
-                <div>{data.name}</div>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
     </div>
   );

@@ -10,12 +10,13 @@ export class JournalApi {
   static getID(id) {
     return mainCaller(`${this.endpoint + id}/`, HTTPMethods.GET, null, null);
   }
-  static getOne(id) {
+  static getOne(id, params) {
     return mainCaller(
-      `${this.endpoint + id}/articles`,
+      `${this.endpoint + id}/articles/`,
       HTTPMethods.GET,
       null,
-      null
+      null,
+      params
     );
   }
   static download(id) {

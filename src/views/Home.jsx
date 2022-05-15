@@ -1,5 +1,6 @@
-import { Skeleton, Tag } from "antd";
+import { Button, Skeleton, Tag } from "antd";
 import React, { useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import MostPopular from "../components/mostPopular";
 import SmallArticle from "../components/smallArticle";
 import TrendingHorizontal from "../components/trendingHorizontal";
@@ -18,13 +19,17 @@ function Home() {
     getArticleByCategory,
     articleByCategory,
   } = useContext(MainContext);
+
   useEffect(() => {
     getJournals();
-    getCurrentJournal();
+    getCurrentJournal({ page_size: 6 });
     getMostPopular();
     getCategory();
-    getArticleByCategory(category[0]?.id);
   }, []);
+
+  useEffect(() => {
+    if (category[0]?.id) getArticleByCategory(category[0]?.id);
+  }, [category[0]?.id]);
 
   const getColor = () => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -59,8 +64,17 @@ function Home() {
             <Skeleton active avatar paragraph={{ rows: 8 }} />
           </div>
         ) : (
-          <TrendingVertical currentJournal={currentJournal} />
+          <div className=" trending_article">
+            {currentJournal?.map((data) => (
+              <TrendingVertical data={data} />
+            ))}
+          </div>
         )}
+        <div className="show_more">
+          <Link to="/current_journal">
+            <Button type="primary">Show more</Button>
+          </Link>
+        </div>
       </div>
       <div className="container section">
         <div className="row justify-content-center mb-5">

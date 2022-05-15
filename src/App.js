@@ -11,12 +11,15 @@ import Member from "./views/Member";
 import Archive from "./views/Archive";
 import Requirements from "./views/Requirements";
 import Instructions from "./views/Instructions";
+import { BackTop } from "antd";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <MainContextProvider>
       <BrowserRouter>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="journal_detail" element={<JournalDetail />} />
@@ -29,6 +32,7 @@ function App() {
           <Route path="instruction" element={<Instructions />} />
         </Routes>
         <Footer />
+        <BackTop duration={1} />
       </BrowserRouter>
     </MainContextProvider>
   );

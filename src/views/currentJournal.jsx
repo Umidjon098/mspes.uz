@@ -30,7 +30,11 @@ function CurrentJournal() {
             <Skeleton active avatar paragraph={{ rows: 8 }} />
           </div>
         ) : (
-          <TrendingVertical currentJournal={currentJournal} />
+          <div className="trending_article">
+            {currentJournal?.map((data) => (
+              <TrendingVertical data={data} />
+            ))}
+          </div>
         )}
       </div>
     </div>

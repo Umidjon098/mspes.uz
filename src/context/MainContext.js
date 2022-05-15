@@ -30,10 +30,10 @@ const MainContextProvider = ({ children }) => {
       setOneJournal(res);
     });
   };
-  const getCurrentJournal = () => {
+  const getCurrentJournal = (params) => {
     JournalApi.get({ is_new: true }).then((res) => {
       setCurrentJournalDetail(res);
-      JournalApi.getOne(res[0].id).then((data) => {
+      JournalApi.getOne(res[0].id, params).then((data) => {
         setCurrentJournal(data);
       });
     });
