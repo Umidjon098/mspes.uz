@@ -1,13 +1,13 @@
 import React from "react";
-import { Typography, Divider } from "antd";
+import { Typography } from "antd";
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Paragraph } = Typography;
 
 function Instructions() {
   return (
     <div className="container section">
       <Typography>
-        <Title>Instructions</Title>
+        <Title>Инструкции</Title>
         <Paragraph>
           Авторы статьи подтверждают, что данная статья не содержит сведений, не
           подлежащих опубликованию в открытой печати, ранее не публиковалась и

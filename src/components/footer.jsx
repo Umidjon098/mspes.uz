@@ -47,7 +47,7 @@ function Footer() {
           </div>
           <div className="icon">
             <a href={settings.telegram} target="_blank">
-              <img src={Telegram} alt="Telegram" />
+              <img style={{ padding: 3 }} src={Telegram} alt="Telegram" />
             </a>
           </div>
         </div>

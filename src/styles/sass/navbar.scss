@@ -12,24 +12,12 @@ $secondaryColor: #ccc;
     justify-content: space-between;
     .left_side {
       width: 10%;
-      @media (max-width: 490px) {
-        width: 100%;
-      }
     }
     .right_side {
       width: 90%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      @media (max-width: 490px) {
-        width: 100%;
-      }
-      @media (min-width: 490px) and (max-width: 992px) {
-        width: 50%;
-      }
-    }
-    @media (max-width: 490px) {
-      flex-direction: column-reverse;
     }
   }
   .logo {
@@ -37,7 +25,13 @@ $secondaryColor: #ccc;
     color: $primaryColor;
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
+    img {
+      width: 40px;
+    }
   }
   .search {
     border: 1px solid $secondaryColor;

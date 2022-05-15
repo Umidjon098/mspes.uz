@@ -29,10 +29,12 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .small_article .img_box {
+    width: 100%;
     margin-right: 0;
     margin-bottom: 24px;
+    max-height: 320px;
   }
 }
 
@@ -77,18 +79,6 @@
 
 .small_article .trending_data .title:hover {
   color: #666;
-}
-
-@media (max-width: 1400px) {
-  .small_article .trending_data .title {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .small_article .trending_data .title {
-    font-size: 20px;
-  }
 }
 
 .small_article .trending_data .author {

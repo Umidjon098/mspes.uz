@@ -251,10 +251,12 @@
       gap: 5px;
     }
   }
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .detail {
-  border: 1px solid #f0f0f0;
-  border-radius: 7px;
   .trending_data {
     position: relative;
     .title {
@@ -280,40 +282,46 @@
     }
   }
   .download {
-    width: 100px;
-    height: 70px;
-    right: 50px;
-    bottom: 20px;
-    position: absolute;
-    border: 1px solid #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 56%;
+    height: 50px;
+    left: 0px;
+    bottom: -20px;
+    position: absolute;
+    border: 1px solid #f0f0f0;
+    font-size: 24px;
+    color: #ccc;
+    border-radius: 14px;
+    cursor: pointer;
+    &:hover {
+      background: #f0f0f0;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      bottom: 0;
+    }
+  }
+  .article_download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    bottom: -90px;
+    position: absolute;
+    border: 1px solid #f0f0f0;
     font-size: 30px;
     color: #ccc;
     border-radius: 14px;
     cursor: pointer;
+    width: 100%;
     &:hover {
       background: #f0f0f0;
     }
   }
-  .article_download {
-    width: 100px;
-    height: 70px;
-    right: -120px;
-    bottom: -50px;
-    position: absolute;
-    border: 1px solid #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: #ccc;
-    border-radius: 14px;
-    cursor: pointer;
-    &:hover {
-      background: #f0f0f0;
-    }
+  .all_count {
+    bottom: 55px;
   }
 }
 .indexing {
@@ -353,7 +361,4 @@
       }
     }
   }
-}
-.trending_vertical_box {
-  display: flex;
 }

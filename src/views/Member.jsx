@@ -35,7 +35,7 @@ function Member() {
         ) : (
           member?.payload?.map((data, key) => {
             return (
-              <Card key={key} style={{ width: 300 }}>
+              <Card key={key}>
                 <Skeleton loading={!member?.payload} avatar active>
                   <Meta
                     avatar={

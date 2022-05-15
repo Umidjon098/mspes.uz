@@ -57,10 +57,6 @@ const Trending = ({ journal = [] }) => {
                   <div className="name">Дата поступления: </div>
                   <div className="create_date">{getDate(data.to_date)}</div>
                 </div>
-                {/* <div className="category">
-                  <div className="name">Ko'rishlar soni: </div>
-                  <div className="create_date">{data.views}</div>
-                </div> */}
                 <div className="all_count">
                   <div className="item">
                     <div className="icon">

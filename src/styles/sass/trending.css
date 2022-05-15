@@ -353,9 +353,14 @@
   gap: 5px;
 }
 
-.detail {
-  border: 1px solid #f0f0f0;
-  border-radius: 7px;
+@media (max-width: 992px) {
+  .all_count {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
 }
 
 .detail .trending_data {
@@ -393,12 +398,6 @@
 }
 
 .detail .download {
-  width: 100px;
-  height: 70px;
-  right: 50px;
-  bottom: 20px;
-  position: absolute;
-  border: 1px solid #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,7 +407,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 30px;
+  width: 56%;
+  height: 50px;
+  left: 0px;
+  bottom: -20px;
+  position: absolute;
+  border: 1px solid #f0f0f0;
+  font-size: 24px;
   color: #ccc;
   border-radius: 14px;
   cursor: pointer;
@@ -418,13 +423,14 @@
   background: #f0f0f0;
 }
 
+@media (max-width: 992px) {
+  .detail .download {
+    width: 100%;
+    bottom: 0;
+  }
+}
+
 .detail .article_download {
-  width: 100px;
-  height: 70px;
-  right: -120px;
-  bottom: -50px;
-  position: absolute;
-  border: 1px solid #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,14 +440,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 70px;
+  bottom: -90px;
+  position: absolute;
+  border: 1px solid #f0f0f0;
   font-size: 30px;
   color: #ccc;
   border-radius: 14px;
   cursor: pointer;
+  width: 100%;
 }
 
 .detail .article_download:hover {
   background: #f0f0f0;
+}
+
+.detail .all_count {
+  bottom: 55px;
 }
 
 .indexing {
@@ -503,11 +518,5 @@
 
 .indexing .item .img_box img {
   width: 100%;
-}
-
-.trending_vertical_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 /*# sourceMappingURL=trending.css.map */
