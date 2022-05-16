@@ -6,6 +6,7 @@ import { MainContext } from "../context/MainContext";
 import {} from "@ant-design/icons";
 import Logo from "../assets/images/logo.jpg";
 import { lang } from "../util";
+import {tl} from "../configs/i18n";
 
 const { Option } = Select;
 const Navbar = () => {
@@ -32,21 +33,21 @@ const Navbar = () => {
           <div className="menu_links">
             <ul>
               <li>
-                <Link to="/">Главная страница</Link>
+                <Link to="/">{tl("main.page")}</Link>
               </li>
               <li>
-                <Link to="/members">Члены редколлегии</Link>
+                <Link to="/members">{tl("members")}</Link>
               </li>
               <li>
                 <Dropdown
                   overlay={
                     <Menu>
                       <Menu.Item>
-                        <Link to="/requirements"> Требования к статье</Link>
+                        <Link to="/requirements">{tl("requirements")}</Link>
                       </Menu.Item>
                       <Menu.Item>
                         <Link to="/instruction">
-                          Процессуальные нормы и правила
+                          {tl("instruction")}
                         </Link>
                       </Menu.Item>
                     </Menu>
@@ -54,7 +55,7 @@ const Navbar = () => {
                   trigger={["click"]}
                 >
                   <Space>
-                    Авторам
+                    {tl("to_authors")}
                     <DownOutlined />
                   </Space>
                 </Dropdown>
@@ -64,23 +65,23 @@ const Navbar = () => {
                   overlay={
                     <Menu>
                       <Menu.Item>
-                        <Link to="/current_journal">Текущий номер</Link>
+                        <Link to="/current_journal">{tl("current.journal")}</Link>
                       </Menu.Item>
                       <Menu.Item>
-                        <Link to="/archive_journal">Архив</Link>
+                        <Link to="/archive_journal">{tl("archive")}</Link>
                       </Menu.Item>
                     </Menu>
                   }
                   trigger={["click"]}
                 >
                   <Space>
-                    Архив
+                    {tl('archive')}
                     <DownOutlined />
                   </Space>
                 </Dropdown>
               </li>
               <li>
-                <Link to="/indexing">Индексация</Link>
+                <Link to="/indexing">{tl("index")}</Link>
               </li>
             </ul>
           </div>
@@ -105,29 +106,29 @@ const Navbar = () => {
       <Drawer title="" onClose={onClose} visible={visible}>
         <Menu defaultSelectedKeys={["1"]} mode="inline" onClick={onClose}>
           <Menu.Item>
-            <Link to="/">Главная страница</Link>
+            <Link to="/">{tl("main.page")}</Link>
           </Menu.Item>
           <Menu.Item>
-            <Link to="/members">Члены редколлегии</Link>
+            <Link to="/members">{tl("members")}</Link>
           </Menu.Item>
-          <Menu.SubMenu title="Авторам">
+          <Menu.SubMenu title={tl("members")}>
             <Menu.Item>
-              <Link to="/requirements"> Требования к статье</Link>
+              <Link to="/requirements">{tl("requirements")}</Link>
             </Menu.Item>
             <Menu.Item>
-              <Link to="/instruction">Процессуальные нормы и правила</Link>
+              <Link to="/instruction">{tl("instruction")}</Link>
             </Menu.Item>
           </Menu.SubMenu>
-          <Menu.SubMenu title="Архив">
+          <Menu.SubMenu title={tl("archive")}>
             <Menu.Item>
-              <Link to="/current_journal">Текущий номер</Link>
+              <Link to="/current_journal">{tl("current.journal")}</Link>
             </Menu.Item>
             <Menu.Item>
-              <Link to="/archive_journal">Архив</Link>
+              <Link to="/archive_journal">{tl("archive")}</Link>
             </Menu.Item>
           </Menu.SubMenu>
           <Menu.Item>
-            <Link to="/indexing">Индексация</Link>
+            <Link to="/indexing">{tl("index")}</Link>
           </Menu.Item>
         </Menu>
       </Drawer>

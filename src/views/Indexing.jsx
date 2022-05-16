@@ -1,6 +1,7 @@
 import { Card, Skeleton } from "antd";
 import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
+import {tl} from "../configs/i18n";
 
 function Indexing() {
   const { indexing, getIndexing } = useContext(MainContext);
@@ -13,7 +14,7 @@ function Indexing() {
     <div className="container section">
       <div className="row justify-content-center mb-5">
         <div className="col-lg-7 text-center">
-          <h2 className="heading">Индексация</h2>
+          <h2 className="heading">{tl("index")}</h2>
         </div>
       </div>
       <div className="indexing">

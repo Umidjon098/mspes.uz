@@ -1,6 +1,7 @@
 import { Avatar, Card, Skeleton } from "antd";
 import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
+import {tl} from "../configs/i18n";
 const { Meta } = Card;
 
 function Member() {
@@ -13,7 +14,7 @@ function Member() {
     <div className="container section">
       <div className="row justify-content-center mb-5">
         <div className="col-lg-7 text-center">
-          <h2 className="heading">Члены редколлегии</h2>
+          <h2 className="heading">{tl("members")}</h2>
         </div>
       </div>
       <div className="member">

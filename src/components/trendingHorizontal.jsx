@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import { Link } from "react-router-dom";
+import {tl} from "../configs/i18n";
 
 const Trending = ({ journal = [] }) => {
   const getDate = (date) => {
@@ -36,7 +37,7 @@ const Trending = ({ journal = [] }) => {
               </div>
               <div className="trending_data">
                 <div className="category">
-                  <div className="name">Дата публикации</div>-
+                  <div className="name">{tl("published.date")}</div>-
                   <div className="create_date">
                     {getDate(data.published_date)}
                   </div>
@@ -50,32 +51,32 @@ const Trending = ({ journal = [] }) => {
                 </Link>
                 <div className="short_description">{data.description}</div>
                 <div className="category">
-                  <div className="name">Дата начала приема: </div>
+                  <div className="name">{tl("start.date")}: </div>
                   <div className="create_date">{getDate(data.from_date)}</div>
                 </div>
                 <div className="category">
-                  <div className="name">Дата поступления: </div>
+                  <div className="name">{tl("end.date")}: </div>
                   <div className="create_date">{getDate(data.to_date)}</div>
                 </div>
                 <div className="all_count">
                   <div className="item">
                     <div className="icon">
                       <EyeOutlined />
-                      Количество просмотров:
+                      {tl("views")}:
                     </div>
                     <div className="value">{data.views}</div>
                   </div>
                   <div className="item">
                     <div className="icon">
                       <DownloadOutlined />
-                      Kоличество загрузок:
+                      {tl("download")}:
                     </div>
                     <div className="value">{data.downloads}</div>
                   </div>
                   <div className="item">
                     <div className="icon">
                       <FilePdfOutlined />
-                      Cтатьи:
+                      {tl("articles")}:
                     </div>
                     <div className="value">{data.count_articles}</div>
                   </div>
