@@ -93,7 +93,7 @@ const Navbar = () => {
             )}
             <Select defaultValue={lang} onChange={handleChange}>
               <Option value="ru">Русский</Option>
-              <Option value="kk">қазақ</Option>
+              <Option value="kk">Қазақша</Option>
             </Select>
           </div>
           <div className="burger" onClick={() => setVisible(true)}>
@@ -139,7 +139,7 @@ const Navbar = () => {
           )}
           <Select defaultValue={lang} onChange={handleChange}>
             <Option value="ru">Русский</Option>
-            <Option value="kk">қазақ</Option>
+            <Option value="kk">Қазақша</Option>
           </Select>
         </div>
       </Drawer>
