@@ -21,27 +21,22 @@ function Requirements() {
             <li>{tl("category8")}</li>
           </ul>
         </Paragraph>
-        <Title level={3}>Примечание для авторов статьи:</Title>
+        <Title level={3}>{tl("paragraph")}:</Title>
         <Paragraph>
-          - статьи принимаются на казахском, русском, узбекском и английском
+          {tl("paragraph1")}
           языках;
         </Paragraph>
         <Paragraph>
-          - статьи можно отправлять в электронном виде до конца каждого месяца
-          через: httpmspeskz (telegram) или aerjan84@mail.ru (эл. почта);
+          {tl("paragraph2")}
         </Paragraph>
         <Paragraph>
-          - статьи, присланные на журнал, будут рассмотрены редакционной
-          коллегией, неотредактированные статьи не будут опубликованы;
+          {tl('paragraph3')}
         </Paragraph>
         <Paragraph>
-          - в журнал могут подавать статьи профессора, докторанты, независимые
-          исследователи, магистранты, одаренные студенты.
+          {tl('paragraph4')}
         </Paragraph>
         <Paragraph>
-          - статьи, принятые в журнал, будут размещены на сайт журнала
-          (www.mspes.kz) и в телеграм-канале https://t.me/mspeskaz в течение
-          первого декады каждого месяца.
+          {tl("paragraph5")}
         </Paragraph>
         <Title level={3}>Требования к оформлению статьи</Title>
         <Paragraph>
