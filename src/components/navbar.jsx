@@ -111,7 +111,7 @@ const Navbar = () => {
           <Menu.Item>
             <Link to="/members">{tl("members")}</Link>
           </Menu.Item>
-          <Menu.SubMenu title={tl("members")}>
+          <Menu.SubMenu title={tl("to_authors")}>
             <Menu.Item>
               <Link to="/requirements">{tl("requirements")}</Link>
             </Menu.Item>
