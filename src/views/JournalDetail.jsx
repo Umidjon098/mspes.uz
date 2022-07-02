@@ -2,17 +2,15 @@ import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
 import JurnalDetail from "../components/jurnalDetail";
 import {tl} from "../configs/i18n";
-
+import {useParams} from "react-router-dom"
 function JournalDetail() {
   const { oneJournal, getOneJournal } = useContext(MainContext);
-  const getId = () => {
-    return localStorage.getItem("id");
-  };
-  const id = getId();
+  const params = useParams()
+
 
   useEffect(() => {
-    if (id) {
-      getOneJournal(id);
+    if (params.id) {
+      getOneJournal(params.id);
     }
   }, []);
 

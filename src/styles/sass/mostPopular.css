@@ -74,7 +74,6 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-transform: lowercase;
   color: #222;
 }
 
@@ -121,6 +120,14 @@
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+}
+
+.most_popular .trending_data .author .authoe_img img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .most_popular .trending_data .author .name {

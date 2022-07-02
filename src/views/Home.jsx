@@ -1,4 +1,4 @@
-import { Button, Skeleton, Tag } from "antd";
+import {Button, Skeleton, Space, Tag} from "antd";
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import MostPopular from "../components/mostPopular";
@@ -7,6 +7,8 @@ import TrendingHorizontal from "../components/trendingHorizontal";
 import TrendingVertical from "../components/trendingVertical";
 import { tl } from "../configs/i18n";
 import { MainContext } from "../context/MainContext";
+import { Typography } from "antd";
+const { Title, Paragraph, Text } = Typography;
 function Home() {
   const {
     getJournals,
@@ -46,13 +48,39 @@ function Home() {
             <h2 className="heading">{tl("journal")}</h2>
           </div>
         </div>
-        {journal?.length === 0 ? (
+        <Typography>
+        <div style={{display: "flex", gap: 10}}>
+          <Title level={4}>{tl("main.paragraph1")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph2")}</Text>
+        </div >
+          <div style={{display: "flex", gap: 10}}>
+          <Title level={4}>{tl("main.paragraph3")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph4")}</Text>
+          </div >
+             <div style={{display: "flex", gap: 10}}>
+          <Title level={4}>{tl("main.paragraph5")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph6")}</Text>
+          </div >
+           <div style={{display: "flex", gap: 10}}>
+          <Title level={4}>{tl("main.paragraph7")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph8")}</Text>
+          </div >
+           <div style={{display: "flex", gap: 10}}>
+          <Title style={{whiteSpace: "nowrap"}} level={4}>{tl("main.paragraph9")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph10")}</Text>
+          </div >
+            <div style={{display: "flex", gap: 10}}>
+          <Title style={{whiteSpace: "nowrap"}} level={4}>{tl("main.paragraph11")}:</Title>
+          <Text style={{fontSize: 20}}>{tl("main.paragraph12")}</Text>
+          </div >
+      </Typography>
+        <div className="mt-5">{journal?.length === 0 ? (
           <Skeleton active avatar paragraph={{ rows: 12 }} />
         ) : (
           <TrendingHorizontal journal={journal} />
-        )}
+        )}</div>
       </div>
-      <div className="container section">
+      <div   className="container section">
         <div className="row justify-content-center">
           <div className="col-lg-7 text-center">
             <h2 className="heading">{tl("current.article")}</h2>

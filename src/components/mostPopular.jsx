@@ -38,19 +38,25 @@ export default function MostPopular({ mostPopular }) {
                   </div>
                 </div>
                 <Link
-                  to="/article_detail"
+                  to={`/article_detail/${data.id}`}
                   className="title"
                   onClick={() => setID(data.id)}
                 >
                   {data.title}
                 </Link>
                 <div className="short_description">{data.annotation}</div>
-                <div className="author">
-                  <div className="authoe_img">{data.authors?.slice(0, 1)}</div>
-                  <div className="outhor_data">
-                    <div className="name">{data.authors}</div>
-                  </div>
-                </div>
+               <div className="author">
+          <div className="authoe_img">
+            {
+              data.author_photo_url ? <img src={ data.author_photo_url} alt="Author"/> : data.authors?.slice(0, 1)
+            }
+            </div>
+          <div className="outhor_data">
+            <div className="name">{data.author?.map(author => {
+              return author.full_name
+            })}</div>
+          </div>
+        </div>
               </div>
             </div>
           </SwiperSlide>

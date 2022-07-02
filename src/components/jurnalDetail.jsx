@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import New from "../assets/images/new.png";
 import {
   EyeOutlined,
@@ -8,14 +8,26 @@ import {
 import { JournalApi } from "../api/main/journals";
 import { Skeleton } from "antd";
 import {tl} from "../configs/i18n";
-
+import { Link, useLocation } from "react-router-dom";
+import TrendingVertical from "../components/trendingVertical"
 function JurnalDetail({ oneJournal = {} }) {
+  const [articleList, setArticleList] = useState([])
+  const location = useLocation()
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
   const FileDownload = (id) => {
     JournalApi.download(id);
   };
+  useEffect(() => {
+    if (oneJournal.id) {
+      JournalApi.getArticleList(oneJournal.id).then(response => {
+      setArticleList(response);
+    }).catch(error => {
+      console.log(error);
+    })
+   }
+  }, [oneJournal.id])
   return (
     <div>
       {Object.keys(oneJournal).length === 0 ? (
@@ -32,7 +44,7 @@ function JurnalDetail({ oneJournal = {} }) {
                 {getDate(oneJournal.published_date)}
               </div>
             </div>
-            <div className="title">{oneJournal.title}</div>
+            <Link to={`/journal_detail/${oneJournal.id}`} className="title">{oneJournal.title}</Link>
             <div className="short_description">{oneJournal.description}</div>
             <div className="category">
               <div className="name">{tl("start.date")}: </div>
@@ -83,6 +95,19 @@ function JurnalDetail({ oneJournal = {} }) {
           )}
         </div>
       )}
+      {location.pathname !=="/archive_journal" && (articleList?.length === 0 ? (
+          <div style={{ display: "flex", gap: "50px" }}>
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+            <Skeleton active avatar paragraph={{ rows: 8 }} />
+          </div>
+        ) : (
+          <div className="trending_article">
+            {articleList?.map((data) => (
+              <TrendingVertical data={data} />
+            ))}
+          </div>
+        ))}
     </div>
   );
 }

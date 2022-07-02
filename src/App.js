@@ -28,8 +28,8 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="journal_detail" element={<JournalDetail />} />
-          <Route path="article_detail" element={<ArticleDetail />} />
+          <Route path="journal_detail/:id" element={<JournalDetail />} />
+          <Route path="article_detail/:id" element={<ArticleDetail />} />
           <Route path="members" element={<Member />} />
           <Route path="indexing" element={<Indexing />} />
           <Route path="current_journal" element={<CurrentJournal />} />

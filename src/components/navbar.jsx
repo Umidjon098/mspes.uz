@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="left_side">
           <div className="logo">
             <img src={Logo} alt="logo" />
-            Mspes
+            <span>Молодой специалист</span>
           </div>
         </div>
         <div className="right_side">

@@ -54,7 +54,6 @@
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      text-transform: lowercase;
       color: #222;
       &:hover {
         color: #666;
@@ -89,6 +88,13 @@
         font-size: 20px;
         color: #fff;
         font-weight: 600;
+        img{
+           width: 45px;
+           height: 45px;
+           border-radius: 50%;
+           object-fit: cover;
+
+        }
       }
 
       .name {

@@ -15,9 +15,7 @@ const Trending = ({ journal = [] }) => {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
-  const setID = (id) => {
-    localStorage.setItem("id", id);
-  };
+  
   return (
     <Swiper
       pagination={true}
@@ -43,9 +41,8 @@ const Trending = ({ journal = [] }) => {
                   </div>
                 </div>
                 <Link
-                  to="/journal_detail"
+                  to={`/journal_detail/${data.id}`}
                   className="title"
-                  onClick={() => setID(data.id)}
                 >
                   {`${data.title} № ${data.number}`}
                 </Link>

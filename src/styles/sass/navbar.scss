@@ -28,11 +28,11 @@ $secondaryColor: #ccc;
     font-size: 20px;
     color: $primaryColor;
     font-weight: 700;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    white-space: nowrap;
     img {
       width: 40px;
     }

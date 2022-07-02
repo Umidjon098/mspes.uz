@@ -3,9 +3,7 @@ const Trending = ({ data }) => {
   const getDate = (date) => {
     return <div>{new Date(date).toString().slice(4, 15)}</div>;
   };
-  const setID = (id) => {
-    localStorage.setItem("id", id);
-  };
+ 
 
   return (
     <div className="trending_vertical">
@@ -18,17 +16,22 @@ const Trending = ({ data }) => {
           <div className="create_date">{getDate(data.published_date)}</div>
         </div>
         <Link
-          to="/article_detail"
+          to={`/article_detail/${data.id}`}
           className="title"
-          onClick={() => setID(data.id)}
         >
           {data.title}
         </Link>
         <div className="short_description">{data.annotation}</div>
         <div className="author">
-          <div className="authoe_img">{data.authors?.slice(0, 1)}</div>
+          <div className="authoe_img">
+            {
+              data.author_photo_url ? <img src={ data.author_photo_url} alt="Author"/> : data.authors?.slice(0, 1)
+            }
+            </div>
           <div className="outhor_data">
-            <div className="name">{data.authors}</div>
+            <div className="name">{data.author?.map(author => {
+              return author.full_name
+            })}</div>
           </div>
         </div>
       </div>

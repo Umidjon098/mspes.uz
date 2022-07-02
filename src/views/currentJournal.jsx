@@ -1,7 +1,5 @@
-import { Skeleton } from "antd";
 import React, { useContext, useEffect } from "react";
 import { MainContext } from "../context/MainContext";
-import TrendingVertical from "../components/trendingVertical";
 import JurnalDetail from "../components/jurnalDetail";
 import {tl} from "../configs/i18n";
 function CurrentJournal() {
@@ -24,19 +22,6 @@ function CurrentJournal() {
             <JurnalDetail oneJournal={currentJournalDetail[0]} />
           )}
         </div>
-        {currentJournal?.length === 0 ? (
-          <div style={{ display: "flex", gap: "50px" }}>
-            <Skeleton active avatar paragraph={{ rows: 8 }} />
-            <Skeleton active avatar paragraph={{ rows: 8 }} />
-            <Skeleton active avatar paragraph={{ rows: 8 }} />
-          </div>
-        ) : (
-          <div className="trending_article">
-            {currentJournal?.map((data) => (
-              <TrendingVertical data={data} />
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

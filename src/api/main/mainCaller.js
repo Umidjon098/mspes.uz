@@ -2,7 +2,7 @@ import HTTPMethods from "../HTTPMethods";
 import axios from "axios";
 import { lang } from "../../util";
 
-export const mainUrl = "http://mspes.kz:81";
+export const mainUrl = "https://api.mspes.kz";
 
 export default function mainCaller(
   path,

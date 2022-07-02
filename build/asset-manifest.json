@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8f96fd0.css",
-    "main.js": "/static/js/main.35d6e94f.js",
+    "main.css": "/static/css/main.1f32e52c.css",
+    "main.js": "/static/js/main.2a01ab40.js",
     "static/media/telegram.png": "/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/new.png": "/static/media/new.dbcb58a0dc744eb58837.png",
     "index.html": "/index.html",
-    "main.a8f96fd0.css.map": "/static/css/main.a8f96fd0.css.map",
-    "main.35d6e94f.js.map": "/static/js/main.35d6e94f.js.map"
+    "main.1f32e52c.css.map": "/static/css/main.1f32e52c.css.map",
+    "main.2a01ab40.js.map": "/static/js/main.2a01ab40.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8f96fd0.css",
-    "static/js/main.35d6e94f.js"
+    "static/css/main.1f32e52c.css",
+    "static/js/main.2a01ab40.js"
   ]
 }

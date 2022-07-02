@@ -10,7 +10,7 @@ export class JournalApi {
   static getID(id) {
     return mainCaller(`${this.endpoint + id}/`, HTTPMethods.GET, null, null);
   }
-  static getOne(id, params) {
+  static getArticleList(id, params) {
     return mainCaller(
       `${this.endpoint + id}/articles/`,
       HTTPMethods.GET,
