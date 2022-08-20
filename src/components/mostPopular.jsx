@@ -52,9 +52,7 @@ export default function MostPopular({ mostPopular }) {
             }
             </div>
           <div className="outhor_data">
-            <div className="name">{data.author?.map(author => {
-              return author.full_name
-            })}</div>
+            <div className="name">{data.authors}</div>
           </div>
         </div>
               </div>
